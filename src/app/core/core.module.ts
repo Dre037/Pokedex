@@ -5,8 +5,7 @@ import { PokemonService } from "./services";
 @NgModule({
     imports: [
         HttpClientModule
-    ],
-    declarations: []
+    ]
 })
 export class CoreModule {
     static forRoot(): ModuleWithProviders<CoreModule> {

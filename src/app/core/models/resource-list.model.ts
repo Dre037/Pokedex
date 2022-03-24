@@ -7,8 +7,8 @@ export interface ResourceSet<T> {
     previous: string
 }
 
-export interface BaseAsync {
+export interface BaseAsync<T> {
     name: string,
     url: string,
-    detail?: Observable<any>
+    detail?: Observable<T>
 }

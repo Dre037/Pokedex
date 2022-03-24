@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
+import { SharedModule } from 'src/app/core/shared/shared.module';
 
 
 
@@ -11,7 +12,8 @@ import { DetailComponent } from './detail/detail.component';
     DetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class PokemonModule { }

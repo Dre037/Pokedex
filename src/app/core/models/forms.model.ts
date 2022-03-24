@@ -1,5 +1,5 @@
 import { BaseAsync } from "./resource-list.model";
 
-export interface Forms extends BaseAsync {
+export interface Forms extends BaseAsync<any> {
 
 }

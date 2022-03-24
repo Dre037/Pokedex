@@ -1,9 +1,9 @@
-import { Stats } from "fs"
 import { Abilities } from "./abilities.model"
 import { Forms } from "./forms.model"
 import { GameIndices } from "./game-indices.model"
 import { Moves } from "./moves.model"
 import { BaseAsync } from "./resource-list.model"
+import { Stats } from "./stats.model"
 
 export interface Pokemon {
     abilities: Abilities[],
@@ -19,7 +19,7 @@ export interface Pokemon {
     name: string,
     order: number,
     past_types: [],
-    species: BaseAsync,
+    species: BaseAsync<any>,
     sprites: Sprites,
     stats: Stats[],
     types: Types[],
@@ -54,5 +54,27 @@ export interface Sprites {
 
 export interface Types {
     slot: number,
-    type: BaseAsync
+    type: BaseAsync<any>
+}
+
+export enum TypeName {
+    Bug = 'bug',
+    Dark = 'dark',
+    Dragon = 'dragon',
+    Eletric = 'eletric',
+    Fairy = 'fairy',
+    Fighting = 'fighting',
+    Fire = 'fire',
+    Flying = 'flying',
+    Ghost = 'ghost',
+    Grass = 'grass',
+    Ground = 'ground',
+    Ice = 'ice',
+    Normal = 'normal',
+    Poison = 'poison',
+    Psychic = 'psychic',
+    Rock = 'rock',
+    Steel = 'steel',
+    Unknown = 'unknown',
+    Water = 'water',
 }

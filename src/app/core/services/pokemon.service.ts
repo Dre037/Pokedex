@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { PokemonList } from "../models";
+import { map, Observable } from "rxjs";
+import { Pokemon, PokemonList } from "../models";
 import { ResourceSet } from "../models/resource-list.model";
 
 @Injectable()
@@ -16,10 +16,10 @@ export class PokemonService {
     }
 
     public getLists(): Observable<ResourceSet<PokemonList>> {
-        return this.http.get<ResourceSet<PokemonList>>(`${this.api}pokemon/?limit=50&offset=0`)
+        return this.http.get<ResourceSet<PokemonList>>(`${this.api}pokemon/?limit=300&offset=0`)
     }
 
-    public getDetailOfPokemon(request: string) {
-        return this.http.get(request);
+    public getDetailOfPokemon(request: string): Observable<Pokemon> {
+        return this.http.get<Pokemon>(request);
     }
 }
