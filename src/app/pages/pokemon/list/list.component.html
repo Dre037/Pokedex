@@ -1,7 +1,14 @@
 <ng-container *ngFor="let item of pokemonList">
-    <div class="pokemon">
-        <div *ngIf="item.detail | async as pokemon">
-            {{pokemon}}
+    <div class="pokemon" *ngIf="item.detail | async as pokemon">
+        <div class="order">
+            <span>{{pokemon.order}}</span>
+        </div>
+        <div class="detail">
+            <h3>{{pokemon.name}}</h3>
+            <img *ngFor="let resp of pokemon.types" [src]="resp.type.name | typeIcon">
+        </div>
+        <div class="sprite">
+            <img [src]="pokemon.sprites.other.home.front_default" alt="">
         </div>
     </div>
 </ng-container>

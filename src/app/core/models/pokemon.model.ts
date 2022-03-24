@@ -19,7 +19,7 @@ export interface Pokemon {
     name: string,
     order: number,
     past_types: [],
-    species: BaseAsync,
+    species: BaseAsync<any>,
     sprites: Sprites,
     stats: Stats[], 
     types: Types[],
@@ -54,5 +54,27 @@ export interface Sprites {
 
 export interface Types {
     slot: number,
-    type: BaseAsync
+    type: BaseAsync<any>
+}
+
+export enum TypeName {
+    Bug = 'bug',
+    Dark = 'dark',
+    Dragon = 'dragon',
+    Eletric = 'eletric',
+    Fairy = 'fairy',
+    Fighting = 'fighting',
+    Fire = 'fire',
+    Flying = 'flying',
+    Ghost = 'ghost',
+    Grass = 'grass',
+    Ground = 'ground',
+    Ice = 'ice',
+    Normal = 'normal',
+    Poison = 'poison',
+    Psychic = 'psychic',
+    Rock = 'rock',
+    Steel = 'steel',
+    Unknown = 'unknown',
+    Water = 'water',
 }
