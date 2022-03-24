@@ -1,9 +1,9 @@
-import { Stats } from "fs"
 import { Abilities } from "./abilities.model"
 import { Forms } from "./forms.model"
 import { GameIndices } from "./game-indices.model"
 import { Moves } from "./moves.model"
 import { BaseAsync } from "./resource-list.model"
+import { Stats } from "./stats.model"
 
 export interface Pokemon {
     abilities: Abilities[],
@@ -21,7 +21,7 @@ export interface Pokemon {
     past_types: [],
     species: BaseAsync,
     sprites: Sprites,
-    stats: Stats[],
+    stats: Stats[], 
     types: Types[],
     weight: number
 }
